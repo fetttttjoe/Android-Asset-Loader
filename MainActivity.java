@@ -26,7 +26,7 @@ public class MainActivity extends BridgeActivity {
         try {
             Context context = createPackageContext(YOUR_PACKAGE_IDENTIFIER, 0);
             AssetManager assetManager  = context.getAssets();
-            copyAsset(assetManager, YOUR_ASSET_NAME;
+            copyAsset(assetManager, YOUR_ASSET_NAME);
             //File directories[] = new File(String.valueOf(getFilesDir())).listFiles(File::isDirectory);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();

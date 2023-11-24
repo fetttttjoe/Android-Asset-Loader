@@ -61,7 +61,9 @@ public class MainActivity extends BridgeActivity {
     }
     private void copyFileAsset(AssetManager assets, String path){
         File file = new File(getFilesDir(), path);
-        if(!file.exists()){
+        if(file.exists()){
+            return;
+        }
         try {
             InputStream inputStream = assets.open(path);
             OutputStream outputStream = new FileOutputStream(file);
@@ -75,7 +77,5 @@ public class MainActivity extends BridgeActivity {
         } catch (IOException e){
             e.printStackTrace();
         }
-        }
     }
-
 }
